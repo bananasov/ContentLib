@@ -1,4 +1,5 @@
 ﻿using System;
+using ContentLib.Core.Model.Event;
 using ContentLib.EnemyAPI.Model.Enemy;
 using ContentLib.EnemyAPI.Model.Enemy.Vanilla.HoarderBug;
 using UnityEngine;
@@ -95,5 +96,10 @@ public class HoarderBugPatches
         public float LoudnessMultiplier { get; set; }
         public AudioClip OverrideVentSFX { get; set; }
         public IEnemyHordeProperties? HordeProperties { get; }
+    }
+
+    private class LocalHoarderBugSpawnEvent(IEnemy enemy) : MonsterSpawnEvent
+    {
+        public override IEnemy Enemy => enemy;
     }
 }
