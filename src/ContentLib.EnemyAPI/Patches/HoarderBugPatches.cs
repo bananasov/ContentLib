@@ -37,6 +37,10 @@ public class HoarderBugPatches
         #endregion
         
         #region IHoarderBug methods
+        public float Annoyance => bugAi.annoyanceMeter;
+        public bool IsAngry => bugAi.isAngry;
+        public Vector3 NestPosition => bugAi.nestPosition;
+        public bool IsWaitingAtNest => bugAi.waitingAtNest;
         public void Kill() => throw new NotImplementedException();
         #endregion
     }
