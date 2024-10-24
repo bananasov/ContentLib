@@ -54,9 +54,9 @@ public class HoarderBugPatches
             set => _type.enemyPrefab = value;
         }
         
-        public bool IsOutsideEnemy { get; }
-        public bool IsDaytimeEnemy { get; }
-        public bool SpawnFromWeeds { get; }
+        public bool IsOutsideEnemy { get; set; }
+        public bool IsDaytimeEnemy { get; set; }
+        public bool SpawnFromWeeds { get; set; }
         
         public AnimationCurve SpawnWeightMultiplier
         {
@@ -76,15 +76,15 @@ public class HoarderBugPatches
             set => _type.PowerLevel = value; 
         }
         
-        public bool CanBeStunned { get; }
-        public bool CanDie { get; }
-        public bool DestroyOnDeath { get; }
-        public float StunTimeMultiplier { get; }
-        public float DoorSpeedMultiplier { get; }
-        public float StunGameDifficultyMultiplier { get; }
-        public bool CanSeeThroughFog { get; }
-        public float PushPlayerForce { get; }
-        public float PushPlayerDistance { get; }
+        public bool CanBeStunned { get; set; }
+        public bool CanDie { get; set; }
+        public bool DestroyOnDeath { get; set; }
+        public float StunTimeMultiplier { get; set; }
+        public float DoorSpeedMultiplier { get; set; }
+        public float StunGameDifficultyMultiplier { get; set; }
+        public bool CanSeeThroughFog { get; set; }
+        public float PushPlayerForce { get; set; }
+        public float PushPlayerDistance { get; set; }
         public AudioClip HitBodySFX { get; set; }
         public AudioClip HitEnemyVoiceSFX { get; set; }
         public AudioClip DeathSFX { get; set; }
