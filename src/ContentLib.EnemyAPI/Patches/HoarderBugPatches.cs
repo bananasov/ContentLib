@@ -41,7 +41,11 @@ public class HoarderBugPatches
         public bool IsAngry => bugAi.isAngry;
         public Vector3 NestPosition => bugAi.nestPosition;
         public bool IsWaitingAtNest => bugAi.waitingAtNest;
+
+        public void DropItem(Vector3 floorPosition, bool inNest) => throw new NotImplementedException();
+        public void GrabItem(int itemObj) => throw new NotImplementedException();
         public void Kill() => throw new NotImplementedException();
+        
         #endregion
     }
 
