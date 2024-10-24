@@ -25,7 +25,7 @@ public class HoarderBugPatches
 
     private class LocalHoarderBug(HoarderBugAI bugAi) : IHoarderBug
     {
-        // IEnemy / IEntity METHODS
+        #region IEnemy / IEntity methods
         public ulong Id => bugAi.NetworkObjectId;
         public bool IsAlive => !bugAi.isEnemyDead;
         public int Health => bugAi.enemyHP;
@@ -34,10 +34,11 @@ public class HoarderBugPatches
         public bool IsSpawned => bugAi.IsSpawned;
         public bool IsHostile => true;
         public bool IsChasing => bugAi.inChase; // NOTE(bananasov): Should we check if angryAtPlayer is not null too?
+        #endregion
         
-        //IHoarderBug METHODS:
-        //-----------------------------------------------------------------------------
+        #region IHoarderBug methods
         public void Kill() => throw new NotImplementedException();
+        #endregion
     }
 
     private class HoarderBugProperties(HoarderBugAI bugAi) : IEnemyProperties
